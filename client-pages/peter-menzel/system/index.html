@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The Peter Menzel System</title>
+<meta name="description" content="End-to-end operating plan for Peter Menzel / PM Real Estate, Mallorca — the ad-to-meeting pipeline, reporting, and how booked buyers reach him. By Wilhelm Agencies.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --bg:#FFFFFF;--bg2:#F6F5F2;--ink:#0B0B0C;--ink-soft:#1C1C1F;
+    --muted:#6C6C72;--faint:#9A9AA0;--line:rgba(11,11,12,.12);--line-soft:rgba(11,11,12,.07);
+    --radius:14px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1040px;margin:0 auto;padding:clamp(18px,3vw,26px) clamp(20px,5vw,40px) 84px}
+  .serif{font-family:'Fraunces',Georgia,serif}
+
+  .brandbar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:70px;
+    border-bottom:1px solid var(--line-soft);margin-bottom:clamp(30px,6vw,58px)}
+  .brandbar .logo{font-family:'Fraunces',serif;font-weight:500;font-size:20px;letter-spacing:-.01em}
+  .brandbar .doc{font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
+
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11.5px;font-weight:500;
+    letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+  .eyebrow::before{content:"";width:22px;height:1px;background:var(--ink);opacity:.45}
+  h1{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(36px,6vw,64px);line-height:1.05;
+    letter-spacing:-.02em;margin:20px 0 0;text-wrap:balance;max-width:17ch}
+  h1 em{font-style:italic;font-weight:400}
+  .lede{font-size:clamp(16px,2vw,19px);color:var(--muted);max-width:62ch;margin:20px 0 0}
+
+  .glance{margin-top:38px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:1px;background:var(--line-soft);border:1px solid var(--line-soft);border-radius:var(--radius);overflow:hidden}
+  .glance div{background:var(--bg2);padding:24px 24px}
+  .glance .k{font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
+  .glance .v{font-family:'Fraunces',serif;font-weight:400;font-size:29px;letter-spacing:-.02em;margin-top:8px;line-height:1.05}
+  .glance .v small{font-family:'Inter',sans-serif;font-size:13px;color:var(--muted);font-weight:400;letter-spacing:0}
+  .goal{margin-top:20px;background:var(--bg2);border:1px solid var(--line-soft);border-radius:var(--radius);
+    padding:18px 22px;font-size:16px;color:var(--ink-soft);line-height:1.55;display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+  .goal .lab{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);flex:0 0 auto}
+  .goal b{font-weight:600;color:var(--ink)}
+
+  section{margin-top:clamp(46px,7vw,70px)}
+  .sechead{display:flex;align-items:baseline;gap:14px;margin-bottom:24px;flex-wrap:wrap}
+  .sechead .no{font-family:'Fraunces',serif;font-size:15px;color:var(--ink);font-weight:500}
+  .sechead h2{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(24px,3.6vw,34px);
+    letter-spacing:-.02em;margin:0}
+  .sechead .sub{margin-left:auto;text-align:right;color:var(--faint);font-size:12.5px;max-width:38ch;line-height:1.5}
+
+  /* pipeline */
+  .pipe{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:1px;
+    background:var(--line-soft);border:1px solid var(--line-soft);border-radius:var(--radius);overflow:hidden}
+  .step{background:var(--bg);padding:24px 22px 26px;display:flex;flex-direction:column;gap:11px;transition:background .2s}
+  .step:hover{background:var(--bg2)}
+  .step .n{font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+  .step h3{font-size:17px;font-weight:600;letter-spacing:-.01em;margin:0;color:var(--ink)}
+  .step p{margin:0;font-size:14px;color:var(--muted);line-height:1.5}
+  .step .chips{margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;padding-top:8px}
+  .chip{font-size:10.5px;font-weight:500;color:var(--muted);border:1px solid var(--line);
+    border-radius:999px;padding:4px 10px;background:var(--bg)}
+  .step.accent{background:var(--ink)}
+  .step.accent:hover{background:#000}
+  .step.accent .n{color:rgba(255,255,255,.55)}
+  .step.accent h3{color:#fff}
+  .step.accent p{color:rgba(255,255,255,.66)}
+  .step.accent .chip{color:rgba(255,255,255,.82);border-color:rgba(255,255,255,.22);background:transparent}
+  .gate{margin-top:16px;display:flex;align-items:center;gap:10px;font-size:12.5px;color:var(--muted)}
+  .gate::before{content:"";width:8px;height:8px;background:var(--ink);border-radius:2px;flex:0 0 auto}
+
+  /* reporting card */
+  .card{background:var(--bg);border:1px solid var(--line-soft);border-radius:var(--radius);padding:30px 32px}
+  .card .cap{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  .spec{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:0 46px}
+  .spec li{display:flex;justify-content:space-between;gap:18px;padding:13px 2px;border-top:1px solid var(--line-soft);font-size:15px}
+  .spec .lbl{color:var(--muted)}
+  .spec .val{text-align:right;font-weight:600;color:var(--ink)}
+  .spec .val small{font-weight:400;color:var(--muted);font-size:13px}
+
+  /* built for you — dark block */
+  .special{background:var(--ink);color:#fff;border-radius:20px;padding:clamp(30px,4vw,44px);
+    display:grid;grid-template-columns:1.1fr .9fr;gap:38px;align-items:center}
+  @media(max-width:720px){.special{grid-template-columns:1fr;gap:26px}.sechead .sub{display:none}}
+  .special .mark{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+  .special h3{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(23px,3vw,31px);letter-spacing:-.02em;margin:12px 0 12px;color:#fff}
+  .special p{margin:0;color:rgba(255,255,255,.7);font-size:16px;line-height:1.6;max-width:52ch}
+  .special .how{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:22px 24px}
+  .special .how .ht{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:15px;font-weight:600}
+  .special .how ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+  .special .how li{font-size:14.5px;color:#fff;display:flex;gap:11px;align-items:baseline}
+  .special .how li::before{content:"";width:5px;height:5px;border-radius:50%;background:#fff;opacity:.55;flex:0 0 auto}
+  .special .how .foot{margin-top:17px;padding-top:15px;border-top:1px solid rgba(255,255,255,.14);
+    font-size:13px;color:rgba(255,255,255,.62);line-height:1.5}
+
+  footer{margin-top:64px;padding-top:28px;border-top:1px solid var(--line-soft);
+    display:flex;flex-wrap:wrap;gap:20px 40px;justify-content:space-between;align-items:baseline}
+  footer p{margin:0;max-width:58ch;color:var(--muted);font-size:15px;line-height:1.55}
+  footer .sig{font-family:'Fraunces',serif;font-size:16px;color:var(--ink)}
+</style>
+
+<div class="wrap">
+  <div class="brandbar"><span class="logo">Wilhelm Agencies</span><span class="doc">System blueprint</span></div>
+
+  <header>
+    <div class="eyebrow">For Peter Menzel · Confidential</div>
+    <h1>Serious buyers, <em>booked into your week.</em></h1>
+    <p class="lede">How Peter's two-week trial runs — from a buyer seeing one of your Mallorca homes in an ad, to a qualified buyer booked into a meeting with you. One pipeline, one place to watch it, built around PM Real Estate's listings in Palma and across the island.</p>
+
+    <div class="glance">
+      <div><div class="k">Trial</div><div class="v">2 weeks <small>paid</small></div></div>
+      <div><div class="k">Buyer band</div><div class="v">€1–5M <small>most around €2M</small></div></div>
+      <div><div class="k">Commitment</div><div class="v">None <small>during the trial</small></div></div>
+      <div><div class="k">Bookings · 2-week trial</div><div class="v">2–4 <small>qualified meetings</small></div></div>
+      <div><div class="k">Bookings · per month</div><div class="v">4–8 <small>after the trial</small></div></div>
+      <div><div class="k">Lead flow</div><div class="v">1 <small>every 1–2 days</small></div></div>
+    </div>
+
+    <div class="goal"><span class="lab">The goal</span><span><b>Your first qualified buyer meetings within 5–9 days of launch</b>, and results strong enough in two weeks to build a long partnership on.</span></div>
+  </header>
+
+  <!-- 1. PIPELINE -->
+  <section>
+    <div class="sechead">
+      <span class="no">01</span><h2>The pipeline</h2>
+      <span class="sub">Every buyer travels these six steps. You only step in at the last one.</span>
+    </div>
+    <div class="pipe">
+      <div class="step">
+        <div class="n">Step 01</div><h3>Reach</h3>
+        <p>Around 30 Meta &amp; YouTube ads, budget split 50/50, showing your homes without a price.</p>
+        <div class="chips"><span class="chip">Off-market angle</span><span class="chip">Mallorcan style</span><span class="chip">Mallorca buyer list</span></div>
+      </div>
+      <div class="step">
+        <div class="n">Step 02</div><h3>Capture</h3>
+        <p>A short lead form, matched to the ad they clicked, lands every buyer in our system.</p>
+        <div class="chips"><span class="chip">Form per ad</span><span class="chip">Band €1–5M</span></div>
+      </div>
+      <div class="step">
+        <div class="n">Step 03</div><h3>Qualify</h3>
+        <p>Our coordinator writes to the buyer on WhatsApp, or by email from your own PM Real Estate address.</p>
+        <div class="chips"><span class="chip">Your email domain</span><span class="chip">WhatsApp · email</span><span class="chip">Never a Gmail address</span></div>
+      </div>
+      <div class="step">
+        <div class="n">Step 04</div><h3>Verify</h3>
+        <p>Budget and timeline are confirmed before a meeting is ever offered. Time-wasters stop here.</p>
+        <div class="chips"><span class="chip">Genuine buyer</span><span class="chip">In-band budget</span></div>
+      </div>
+      <div class="step">
+        <div class="n">Step 05</div><h3>Book</h3>
+        <p>We book the meeting and email you the date and time. Doesn't suit you? Reply, and we move it.</p>
+        <div class="chips"><span class="chip">Booked for you</span><span class="chip">Email per booking</span></div>
+      </div>
+      <div class="step accent">
+        <div class="n">Step 06</div><h3>Meet</h3>
+        <p>You meet a qualified buyer who already knows the property. The sale is yours.</p>
+        <div class="chips"><span class="chip">Your meeting</span><span class="chip">You keep the relationship</span></div>
+      </div>
+    </div>
+    <div class="gate">Quality over quantity — about one lead a day or every second day, each one worth your time.</div>
+  </section>
+
+  <!-- 2. REPORTING -->
+  <section>
+    <div class="sechead">
+      <span class="no">02</span><h2>What you see</h2>
+      <span class="sub">The single window you watch the whole trial through.</span>
+    </div>
+    <div class="card">
+      <div class="cap">Reporting · your visibility</div>
+      <ul class="spec">
+        <li><span class="lbl">Live dashboard</span><span class="val">24/7 app</span></li>
+        <li><span class="lbl">Shows</span><span class="val">Leads · status · meetings</span></li>
+        <li><span class="lbl">Export</span><span class="val">CSV <small>any time</small></span></li>
+        <li><span class="lbl">Your calendar</span><span class="val">Stays yours <small>no integration</small></span></li>
+        <li><span class="lbl">Ads live</span><span class="val">Thu 15 Oct</span></li>
+        <li><span class="lbl">First leads</span><span class="val">Fri 16 Oct <small>after Meta review</small></span></li>
+        <li><span class="lbl">Update calls</span><span class="val">2 <small>after day 7 &amp; day 14</small></span></li>
+        <li><span class="lbl">Inventory source</span><span class="val">Your listings + partners</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3. BUILT FOR YOU -->
+  <section>
+    <div class="sechead">
+      <span class="no">03</span><h2>Built for you</h2>
+      <span class="sub">How a booked buyer actually reaches Peter.</span>
+    </div>
+    <div class="special">
+      <div>
+        <div class="mark">Your diary stays yours</div>
+        <h3>Bookings arrive by email, not through your calendar system</h3>
+        <p>You told us the client always comes first and you will make the time, so we don't plug into your onOffice calendar. Each time a buyer is booked, you get one email with everything you need. If the time doesn't work, reply and we offer the buyer a new one. We know you're off email on Sundays, and we keep it in mind.</p>
+      </div>
+      <div class="how">
+        <div class="ht">Each booking email carries</div>
+        <ul>
+          <li>Name &amp; contact details</li>
+          <li>Budget &amp; what they're looking for</li>
+          <li>Date &amp; time of the meeting</li>
+        </ul>
+        <div class="foot">Reply to move it — we rebook with the buyer.</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Working plan for the PM Real Estate trial — a shared reference, not a contract. Anything here can move as we confirm the property list and the booking details with Peter.</p>
+    <div class="sig">Wilhelm Agencies</div>
+  </footer>
+</div>
