@@ -1,103 +1,68 @@
-# PPM ad status and Peter Menzel onboarding, 18.10.2026 10:20 CEST
+# PPM ads and Peter's first ads, 18.10.2026 (corrected 10:45 CEST)
 
-Written by the cloud chat from the live app (Railway logs of `web`, `/feed/ad-status.json`,
-`/feed/billing.json`) and Gmail. It can't see the local `ppm-system` files. Paste into the local
+Written by the cloud chat from the live app (Railway logs of `web`, `/feed/ad-status.json`) and the
+app's emails. It can't see or change the local `ppm-system` code. Paste into the local
 "Ad & lead system" chat next to ad_lead_rules_2026_10_04.md.
 
-## 1. PPM: the new ads
+Carl's settings: floor EUR 1M, goal EUR 3M. Peter is onboarded in the Hub. Follow these as written.
 
-A new PPM batch started building today at 10:15 CEST (last NO-CAT batch went live 07.10, cadence is
-5 days, so it was due).
+## 1. Bug: the app moves the floor up to the goal
 
-What the build is doing:
-- 30 ads planned: 15 proven + 15 experimental. English only (English: 99 leads, 8 booked.
-  Spanish and German: 0 booked).
-- Proven half locked to Bendinat, Llucmajor, Son Vida (where the bookings came from).
-- All price-free, as Carl asked for NO-CAT.
-- Steered toward buyers ready now (urgency and timeline angles first).
-- 2 lines Meta keeps rejecting are dropped ("off market finest homes never reach",
-  "finest homes never appear portal").
-- 2 proven ads borrowed from RL Real Estate Ibiza for the experimental half.
+PPM build log, today 10:15 CEST:
 
-Problems to fix:
-1. The new experimental generator made nothing. Log: "invented experimental ads: None kept of None",
-   "designer set: 0 of 15", "experimental ideas: 0 generated". The experimental half falls back to the
-   older generator, which is the "ads all look the same" problem again. The insight engine is not
-   running in the real build.
-2. Price floor raised from EUR 1M to EUR 5M this morning; it now only pictures homes from EUR 5.35M to
-   10M (37 cheaper homes left out). But 6 of PPM's 9 target leads came from the 3.5 to 5M band, and
-   Carl's target is 3 to 10M. This cuts out where most good leads came from. Carl decides.
-3. Nothing goes live before Carl's ok (rule from 04.10). Check the batch lands in pending, not live.
+    price floor: EUR 1,000,000 (unchanged)
+    price floor RAISED toward the target: EUR 1,000,000 -> EUR 5,000,000 (target EUR 5,000,000)
+    price target: advertising from EUR 5,350,000 to EUR 10,000,000 ... 37 cheaper properties excluded
 
-Results so far (whole account):
-- Spend CHF 569, 150 leads, 9 target leads (EUR 3.5M+), 6%. CHF 63 per target lead.
-- The app says "switch recommended": only 11 of 150 became real qualified buyers.
-- 4 ads delivering now (proven A and C at EUR 4,995,000, two insight experimental ads), 10 leads, 1 booked.
-- Best ever: PPM NO-CAT Bendinat V-3850 (14 leads, 5 booked), igubkh strategy 3 (3 booked).
-- Next invoice WA-PPM-005, EUR 3,500, due 24.10.
+So the app reads Carl's floor correctly, then overrides it. It also uses EUR 5M as the target, not
+Carl's EUR 3M. Fix: the floor stays at what Carl wrote. The goal is what the ads aim at. It is never
+used as a new floor. Remove or switch off the "raised toward the target" step.
 
-## 2. Peter Menzel (PM Real Estate): onboarding
+Peter has the same problem. App email 18.10 03:39 CEST: "ad update cannot finish: not enough homes
+in the target range. Only two homes in the property pool are in the target range." With the floor at
+EUR 1M, his own homes and his partners' homes from EUR 1M up all count, and the build has enough homes.
 
-State: `pm_real_estate` exists in the app (app made 15.10, trial EUR 2,900 invoiced 13.10), but he is
-NOT onboarded in the Hub. So: 0 ads, no WhatsApp number, nothing paid started. The plan said ads live
-Thu 15.10, so he is 3 days late.
+## 2. PPM: where the new ads are
 
-Onboard him in the Hub (Add a Client, prefilled):
-https://wilhelm-hub.netlify.app/#addclient&name=PM%20Real%20Estate&website=https%3A%2F%2Fwww.pm-realestate.com&contact=Peter%20Menzel
+- The 30 ads built 14.10 are still waiting for Carl's OK1 (app email 17.10: "waited 3+ days").
+- Today's rebuild made 10 of 30 (all proven, 0 experimental: "only 0 of 15 experimental ads could be
+  made unique"). It was held, and the app put back the 14.10 preview.
+- The experimental generator returns nothing ("invented experimental ads: None kept of None").
+  Fix this, or every batch stops at 10 of 30.
 
-What to fill in:
+## 3. Peter (PM Real Estate): why his ads haven't started
 
-| Field | Value | Source |
-|---|---|---|
-| Contact | Peter Menzel, peter@pm-realestate.com | his emails |
-| Monthly fee | EUR 2,900 (trial invoiced 13.10) | billing feed |
-| Buyer band | EUR 1M to 5M, most around 2M | meeting |
-| Facebook page id | The new "PM Real Estate" page Giuditta Malavasi made on 14.10. Copy the id from the page | meeting notes 14.10 |
-| Listings | Secret Marketing: pm-realestate.com id 3847. Own: id 4295. Partner: Port d'Andratx expose on falc.landingpage.immobilien (link in his email of 14.10). Plus the homes on the concept board: Calatrava palace, Establiments finca, Paseo Maritimo penthouse | his email 14.10, concept board |
-| Who takes meetings | Peter | blueprint |
-| Bookings | By email, never same day | blueprint |
-| CRM | onOffice | blueprint |
-| Ad budget | MISSING, Carl | |
-| His WhatsApp number | MISSING, Carl | |
-| Ad countries | MISSING. PPM data: most leads from DE, CH, AT | ad-status feed |
-| Buyer languages | MISSING. PPM data says English (all 8 PPM bookings) | build log |
+The automatic build did start after onboarding:
+- 18.10 00:46 CEST: batch held, 10 of 30 ready (10 proven, 0 experimental).
+- 18.10 02:51 CEST: the app asked "Build PM Real Estate's ads?" (Yes / Not yet). Still unanswered.
+- 18.10 03:39 CEST: held, only 2 homes in the target range, so the designer made 2 experimental ads.
+  FALC-MP-51320 (EUR 2,995,000) has no town in its data. The Port d'Andratx home (FALC-AnRe-92070)
+  can carry at most 8 ads.
 
-Fix after onboarding: the app note for pm_real_estate says "objective = EUR 3.5M+ buyers". Peter's band
-is EUR 1M to 5M. Make sure the onboarding sets his band, or his ads will chase the wrong buyers.
+Fix, in this order:
+1. Floor EUR 1M as Carl set it (section 1). That opens up the rest of his pool.
+2. Fix the experimental generator (section 2), the same one that blocks PPM.
+3. Add the town for FALC-MP-51320, taken from the listing, never guessed.
+4. Rebuild. Ads are created paused: OK1 and OK2 from Carl as usual.
 
-## 3. How Peter's first ads should be made (adapted to PPM's new batch)
-
-Rule from 04.10 (new client by budget range): normal ads copy the normal ads working right now for
-clients with the same budget; experimental ads use knowledge pooled from all of them.
-
-Adapt:
-1. Do NOT copy PPM's new batch. It now targets EUR 5M to 10M, and Peter targets 1M to 5M.
-   Use the PPM ads that worked in the 1M to 5M range (proven A/C/G/H/L/N at EUR 2.2M to 5M,
-   NO-CAT Bendinat V-3850) plus Direct Estates (EUR 1M to 1.65M, 4 booked). Several clients
-   share this budget, so mix them.
-2. Peter and PPM are both on Mallorca and reach the same buyers. Tailor each ad to Peter's own homes
-   and brand (concept board: shutter green, sandstone, brass, no prices). No near-copies of PPM ads
-   in the same feed.
-3. Start Peter's build after the PPM batch finishes, so it reads PPM's latest results and the two
-   builds don't run at once.
-4. Fix the empty experimental generator (section 1, problem 1) first, or Peter's experimental half
-   will also fall back to the old look.
-5. Peter's first batch goes to Carl for review. Nothing live before his ok.
+Source of his ads: the app found no client with his budget and uses PPM as the closest (alert
+17.10). Under the 04.10 rule this is right. Use PPM ads that worked from EUR 1M up, not the new
+EUR 5M+ ones. Both clients are on Mallorca, so tailor each ad to Peter's own homes, with no near-copies.
 
 ## 4. Also seen
 
-The app access token is sent in the URL (`?token=...`), so Railway writes it into the logs in plain
+The app access token goes in the URL (`?token=...`), so Railway writes it into the logs in plain
 text. Move it to a header and change the token.
 
 ## To-dos
 
 Carl:
-- [ ] Decide the PPM price floor: keep EUR 5M or go back to 3M (3.5 to 5M brought 6 of 9 target leads)
-- [ ] Review the new PPM batch in the app before it goes live
-- [ ] Onboard Peter in the Hub with the table above; fill ad budget, WhatsApp number, countries, languages
+- [ ] Give OK1 (or reject) the 30 PPM ads from 14.10
+- [ ] Tell the ad chat: floor EUR 1M, goal EUR 3M, never raise the floor (paste section 1)
+- [ ] Tick the 4 ad changes from Peter's 13.10 update call, if you want them in his first batch
 
-Local chat:
-- [ ] Find why the experimental generator returns None and fix it before the next build
-- [ ] Check the PPM batch is waiting for Carl's ok, not live
-- [ ] After Peter's onboarding: set his band to EUR 1M to 5M, then build his first batch as in section 3
+Local ad chat:
+- [ ] Remove the "floor raised toward the target" step and use Carl's goal of EUR 3M
+- [ ] Fix the experimental generator that returns None
+- [ ] Fill the town for FALC-MP-51320, then rebuild Peter's batch
 - [ ] Move the app token out of the URL and change it
