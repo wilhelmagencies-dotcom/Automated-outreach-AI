@@ -4,13 +4,13 @@
 job by itself, and it tells you what got done and what you need to do. You never need to open
 another chat.
 
-Last updated: 19.10.2026, 14:25
+Last updated: 19.10.2026, 14:30
 
 ---
 
 ## Your to-do list (most important first)
 
-0. **On your laptop, once:** open the ads chat and click **Allow** (choose "always allow") for
+0. **Switch your laptop on (it is off or asleep since 13:53), then once:** open the ads chat and click **Allow** (choose "always allow") for
    "Send Message". It is stuck on that click, and all Peter's ad work waits behind it.
 1. **Send Peter the WhatsApp text** (IONOS email box + onOffice API user). It is in the General chat.
 2. **Do NOT press OK1 on Peter's 22 ads.** The rule is 30. The ads chat rebuilds his batch to the
