@@ -4,7 +4,7 @@
 job by itself, and it tells you what got done and what you need to do. You never need to open
 another chat.
 
-Last updated: 19.10.2026, 13:40
+Last updated: 19.10.2026, 13:55
 
 ---
 
@@ -17,10 +17,11 @@ Last updated: 19.10.2026, 13:40
       writes appointments into his onOffice diary, which has only ever run on PPM's account.
    c) Send Peter the WhatsApp text from the General chat (an IONOS email box + an onOffice API user).
 1. **Approve the 30 PPM ads in the app** (OK1, then OK2). They have been waiting since 14.10.
-2. **Peter's ads go live TODAY:** his first 25 ads (13 normal, 12 experimental) are ready in
-   the app, waiting for your OK1 and OK2. Before OK1, choose: keep the 4 website homes in 7 of
-   the ads (recommended) or "only his 6" homes. Also tick Yes/No on the 3 changes from Peter's
-   13.10 meeting on the approval screen (e.g. "advertise 4-7M homes", "50/50 YouTube and Meta").
+2. **Peter's ads go live TODAY:** app → PM Real Estate → Ads waiting → **OK1** on the 22 ads
+   (10 normal, 12 experimental), then **OK2**. They go live at the agreed CHF 104 a day.
+   Keep the 4 website homes (recommended) unless you say "only his 6" before OK1.
+   Answer the 3 meeting changes only AFTER OK2 (a Yes before locks the batch and stops today's
+   launch). Recommended: No to YouTube for now.
 3. **Lead data is open to the public.** Quick fix now: turn on password protection for the HQ
    app on Netlify. Real fix: the General chat needs the live backend code, or access to the
    Railway project that runs it (see subject 3).
@@ -41,7 +42,7 @@ Last updated: 19.10.2026, 13:40
 | # | Subject | Status | Folder |
 |---|---|---|---|
 | 1 | **Ads and leads system** (PPM and Peter) | Running. Ads waiting for your OK. Two bugs found on 18.10 (price floor, experimental ads); fix status is unclear. | `subjects/1-ads-ppm-and-peter/` |
-| 2 | **Peter Menzel (PM Real Estate), new client** | Onboarded. Ads start today, 19.10 (25 ads ready for your OK). Connection built 19.10 (his 211 website homes, his mailbox, leads into his onOffice); waiting for your OK and for Peter's mailbox + API user. First review Mon 26.10 afternoon. Closings goal still open. | `subjects/2-peter-menzel-client/` |
+| 2 | **Peter Menzel (PM Real Estate), new client** | Onboarded. Ads start today, 19.10 (22 ads ready for your OK; WhatsApp first-message template waiting for Meta's approval). Connection built 19.10 (his 211 website homes, his mailbox, leads into his onOffice); waiting for your OK and for Peter's mailbox + API user. First review Mon 26.10 afternoon. Closings goal still open. | `subjects/2-peter-menzel-client/` |
 | 3 | **Backend security (lead data is public)** | Fix is built and tested, but **not live**. Blocked: the live code is not on GitHub. | `subjects/3-backend-security/` |
 | 4 | **Mum: Nordic Designs** | Sales decks done. Waiting for her answers. | `subjects/4-mum-nordic-designs/` |
 | 5 | **Company Hub: contract signing** | Live since 11.09 (Hub → "Signed Contracts" tab, drag-and-drop fields, your signature and date added automatically). Code is only on the laptop (`esign-service`), not on GitHub. Email copy of the signed PDF not set up (optional). | – |
