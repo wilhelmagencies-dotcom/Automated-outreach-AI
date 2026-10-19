@@ -10,6 +10,9 @@ Last updated: 19.10.2026, 13:20
 
 ## Your to-do list (most important first)
 
+0. **Type Peter's onOffice login into the app** (Peter / PM Real Estate → onOffice card):
+   customer `PeterMenzelRealEstate`, user `Gregory`, and the password from his WhatsApp.
+   The app stores it encrypted. The General chat will tell you the exact place to click.
 1. **Approve the 30 PPM ads in the app** (OK1, then OK2). They have been waiting since 14.10.
 2. **Peter's first ads:** when the app emails you about his batch, give OK1 and OK2.
    Peter wants to start **tomorrow, Tue 20.10**. A helper chat is connecting his onOffice
