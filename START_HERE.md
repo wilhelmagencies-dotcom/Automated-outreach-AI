@@ -26,7 +26,9 @@ Last updated: 19.10.2026, 13:30
 6. **Decide Peter's closings goal** (how many sales), so it can go on his system page.
 7. **Get your mum's answers** to the 38 open questions (including permission to use the
    "before" photos). Then her system can be built.
-8. Keep Anthropic credit topped up with auto-reload on. Without credit the ads and Sofia's
+8. **Revoke the Gmail app password** you typed into the contract-signing chat on 10.09 (Google
+   account → Security → App passwords). It is not used, but it sits in plain text in that chat.
+9. Keep Anthropic credit topped up with auto-reload on. Without credit the ads and Sofia's
    replies stop (this happened on 18.10).
 
 ---
@@ -39,6 +41,7 @@ Last updated: 19.10.2026, 13:30
 | 2 | **Peter Menzel (PM Real Estate), new client** | Onboarded. Ads start today, 19.10 (25 ads ready for your OK). onOffice login received 19.10, being connected now. First review Mon 26.10 afternoon. Closings goal still open. | `subjects/2-peter-menzel-client/` |
 | 3 | **Backend security (lead data is public)** | Fix is built and tested, but **not live**. Blocked: the live code is not on GitHub. | `subjects/3-backend-security/` |
 | 4 | **Mum: Nordic Designs** | Sales decks done. Waiting for her answers. | `subjects/4-mum-nordic-designs/` |
+| 5 | **Company Hub: contract signing** | Live since 11.09 (Hub → "Signed Contracts" tab, drag-and-drop fields, your signature and date added automatically). Code is only on the laptop (`esign-service`), not on GitHub. Email copy of the signed PDF not set up (optional). | – |
 
 ### Links
 
@@ -75,5 +78,6 @@ Last updated: 19.10.2026, 13:30
 | 2 Peter Menzel | `wilhelmagencies-dotcom/Automated-outreach-AI` |
 | 3 Backend security | `wilhelmagencies-dotcom/Automated-outreach-AI` (+ the live backend code once found) |
 | 4 Mum: Nordic Designs | `wilhelmagencies-dotcom/Automated-outreach-AI` |
+| 5 Contract signing | laptop only: `/Users/carlwilhelm/untitled folder/esign-service` (live at wilhelm-esign-production.up.railway.app; Hub at wilhelm-hub.netlify.app) |
 
 How the General chat works is written down in `CLAUDE.md`.
