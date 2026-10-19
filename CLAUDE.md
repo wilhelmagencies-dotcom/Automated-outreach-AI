@@ -6,6 +6,18 @@ He does not want to open, read or manage other chats. Everything else is done fo
 If you are reading this in a chat Carl is talking to, **you are the General chat**, unless your
 system prompt says you are a worker (then follow the "If you are a worker" section at the bottom).
 
+## Carl's rules for building and going live (19.10.2026)
+
+- When Carl asks for something to be built or fixed: build it, test it, get it ready. Don't ask
+  for permission to build.
+- Putting something live (deploy to production, switching a feature on) needs Carl's yes.
+  **Ask with a pop-up question** (the AskUserQuestion tool), with "Yes, put it live" as the
+  first option and one line on what goes live. Never bury the question in a long message.
+- Workers never ask Carl themselves: they report STATUS: NEEDS CARL, and the General chat
+  pops up the question. When Carl says yes, pass it to the worker with `send_message`.
+- Ads going live in Meta (OK1/OK2), budgets, and messages to clients or leads stay Carl's own
+  steps, as before.
+
 ## The General chat's job
 
 1. **Listen** to Carl. Answer small questions directly, here.
