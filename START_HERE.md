@@ -4,7 +4,7 @@
 job by itself, and it tells you what got done and what you need to do. You never need to open
 another chat.
 
-Last updated: 19.10.2026, 13:20
+Last updated: 19.10.2026, 13:30
 
 ---
 
@@ -14,9 +14,10 @@ Last updated: 19.10.2026, 13:20
    customer `PeterMenzelRealEstate`, user `Gregory`, and the password from his WhatsApp.
    The app stores it encrypted. The General chat will tell you the exact place to click.
 1. **Approve the 30 PPM ads in the app** (OK1, then OK2). They have been waiting since 14.10.
-2. **Peter's first ads:** when the app emails you about his batch, give OK1 and OK2.
-   Peter wants to start **tomorrow, Tue 20.10**. A helper chat is connecting his onOffice
-   (email, leads, listings) right now; it will tell you what to approve.
+2. **Peter's ads go live TODAY:** his first 25 ads (13 normal, 12 experimental) are ready in
+   the app, waiting for your OK1 and OK2. Before OK1, choose: keep the 4 website homes in 7 of
+   the ads (recommended) or "only his 6" homes. Also tick Yes/No on the 3 changes from Peter's
+   13.10 meeting on the approval screen (e.g. "advertise 4-7M homes", "50/50 YouTube and Meta").
 3. **Lead data is open to the public.** Quick fix now: turn on password protection for the HQ
    app on Netlify. Real fix: the General chat needs the live backend code, or access to the
    Railway project that runs it (see subject 3).
@@ -35,7 +36,7 @@ Last updated: 19.10.2026, 13:20
 | # | Subject | Status | Folder |
 |---|---|---|---|
 | 1 | **Ads and leads system** (PPM and Peter) | Running. Ads waiting for your OK. Two bugs found on 18.10 (price floor, experimental ads); fix status is unclear. | `subjects/1-ads-ppm-and-peter/` |
-| 2 | **Peter Menzel (PM Real Estate), new client** | Onboarded. Starts Tue 20.10. onOffice login received 19.10, being connected now. First review Mon 26.10 afternoon. Closings goal still open. | `subjects/2-peter-menzel-client/` |
+| 2 | **Peter Menzel (PM Real Estate), new client** | Onboarded. Ads start today, 19.10 (25 ads ready for your OK). onOffice login received 19.10, being connected now. First review Mon 26.10 afternoon. Closings goal still open. | `subjects/2-peter-menzel-client/` |
 | 3 | **Backend security (lead data is public)** | Fix is built and tested, but **not live**. Blocked: the live code is not on GitHub. | `subjects/3-backend-security/` |
 | 4 | **Mum: Nordic Designs** | Sales decks done. Waiting for her answers. | `subjects/4-mum-nordic-designs/` |
 

@@ -85,8 +85,10 @@ A worker's report arrives in the General chat as a message from another session.
 
 1. Update `START_HERE.md` (subject status, Carl's to-do list, workers table). Commit and push.
 2. Tell Carl in 2 to 5 lines what happened and exactly what he must do, if anything.
-3. If the worker is DONE and nothing more is coming on that subject, archive it with
-   `archive_session` and move it out of the workers table.
+3. **Carl's rule: when a subject is done, remove its worker chat** (never the General chat).
+   There is no delete tool, so archive it with `archive_session` (it disappears from his chat
+   list) and move it out of the workers table. Do this as soon as the worker is DONE and
+   nothing more is coming on that subject; don't wait to be asked.
 4. If Carl answers a worker's question, pass the answer on to that worker with `send_message`.
 
 ## Housekeeping
